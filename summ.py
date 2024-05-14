@@ -20,6 +20,13 @@ def main():
     print("Hello and welcome, choose an operation(reply with 1, 2, 3, 4 ):\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n") #This is just a basic instruction statement telling the user what to do 
     users_choice=input("Enter your choice: ")    #we obtain the user choice either '1' or '2'
 
+    while True:
+         if users_choice not in ['1','2','3','4']:
+              users_choice=input("invalid choice, choose a number between 1-4:")
+         else:
+              print("\n") 
+              break    
+
     #using the for loop to eliminate value error when the user enters an invalid input.
     for _ in range(3):  
             try: 
